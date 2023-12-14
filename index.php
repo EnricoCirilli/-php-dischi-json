@@ -18,3 +18,36 @@
     <!-- Custom css -->
     <link rel="stylesheet" href="style.css">
 </head>
+<body class="bg-secondary">
+    <div id="app">
+        <header class="mb-4">
+            <nav class="navbar bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/991px-Spotify_icon.svg.png"
+                            alt="Spotify Logo" width="30" height="30">
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row g-3">
+                    <div v-for="(disk, index) in diskList" class="col-4">
+                        <div class="card bg-dark text-white text-center">
+                            <img :src="disk.poster" class="card-img-top img-fluid" :alt="disk.author">
+                            <div class="card-body">
+                                <h5 class="card-title">{{disk.title}}</h5>
+                                <p class="card-text">{{disk.author}}</p>
+                                <p cass="card-text">{{disk.year}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./script.js" type="text/javascript"></script>
+</body>
+
+</html>
